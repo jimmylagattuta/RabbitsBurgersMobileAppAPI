@@ -1,6 +1,8 @@
 class Api::V1::UsersController < ApplicationController
 	def new
 		puts "*" * 100
+		first_name = params['firstName']
+		last_name = params['lastName']
 		email = params['emailSignup']
 		password = params['passwordSignup']
 		password_confirmation = params['passwordSignupConfirmation']
