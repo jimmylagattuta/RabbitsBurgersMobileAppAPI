@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   post "/api/v1/users/signup" => "api/v1/users#new"
   post "/api/v1/users" => "api/v1/users#create"
+  get "/api/v1/users/check" => "api/v1/users#check"
+  post "/api/v1/users/login" => "api/v1/users#login"
+  post "/api/v1/users/logout" => "api/v1/users#logout"
 
-  get "/api/v1/sessions/check" => "api/v1/sessions#check"
-  post "/api/v1/sessions/login" => "api/v1/sessions#new"
+
   post "/ai/v1/sessions/login" => "api/v1/sessions#create"
   get "/api/v1/sessions/logout" => "api/v1/sessions#destroy"
 
